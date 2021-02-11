@@ -10,4 +10,8 @@ public abstract class Room {
         this.capacity = capacity;
         this.guests = new ArrayList<Guest>();
     }
+
+    public ArrayList<Guest> getRoomGuests(){
+        return this.guests;
+    }
 }
