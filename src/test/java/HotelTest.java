@@ -29,6 +29,7 @@ public class HotelTest {
         hotel.addBedroomToHotel(bedroom1);
         hotel.addBedroomToHotel(bedroom2);
         hotel.addBedroomToHotel(bedroom3);
+        hotel.addConferenceRoomToHotel(conferenceRoom1);
 
     }
 
@@ -39,13 +40,19 @@ public class HotelTest {
 
     @Test
     public void hasConferenceRooms(){
-        assertEquals(0, hotel.getNumberOfConferenceRooms());
+        assertEquals(1, hotel.getNumberOfConferenceRooms());
     }
 
     @Test
-    public void guestHasCheckedIn(){
+    public void guestHasCheckedIntoBedroom(){
         hotel.checkInGuestToBedroom(mike, 2);
         assertEquals(1, bedroom2.getGuestsCount());
+    }
+
+    @Test
+    public void guestHasCheckedIntoConferenceRoom(){
+        hotel.checkInGuestToConferenceRoom(mike, "Di Massimo Suite");
+        assertEquals(1, conferenceRoom1.getGuestsCount());
     }
 
 

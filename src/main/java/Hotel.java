@@ -28,8 +28,20 @@ public class Hotel {
         }
     }
 
+    public void checkInGuestToConferenceRoom(Guest guest, String roomNameToCheckInto) {
+        for (int croom = 0; croom  < conferenceRooms.size(); croom ++) {
+            if (conferenceRooms.get(croom ).getRoomName() == roomNameToCheckInto) {
+                conferenceRooms.get(croom ).addGuest(guest);
+            }
+        }
+    }
+
     public void addBedroomToHotel(Bedroom bedroom){
         this.bedrooms.add(bedroom);
+    }
+
+    public void addConferenceRoomToHotel(ConferenceRoom conferenceRoom){
+        this.conferenceRooms.add(conferenceRoom);
     }
 
 
