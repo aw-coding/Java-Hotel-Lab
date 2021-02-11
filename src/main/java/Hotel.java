@@ -17,21 +17,15 @@ public class Hotel {
         return this.conferenceRooms.length;
     }
 
-//    public void checkInGuest(Guest guest, Room roomName){
-//        // joe, Presidential suite
-//        for (i = 0; i < bedrooms.length; i++) {
-//            if roomName == i.
-//        }
-//        i.guests.add(guest)
-//
-//    }
 
     public void checkInGuestToBedroom(Guest guest, int roomNumberToCheckInto) {
         for (int bedroom = 0; bedroom < bedrooms.length; bedroom++) {
-
             if (bedrooms[bedroom].getRoomNumber() == roomNumberToCheckInto) {
                     bedrooms[bedroom].getRoomGuests().add(guest);
                 }
         }
     }
+
+
+
 }
