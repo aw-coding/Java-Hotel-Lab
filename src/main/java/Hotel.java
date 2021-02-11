@@ -59,4 +59,10 @@ public class Hotel {
             }
         }
     }
+
+    public Booking bookRoom(Bedroom bedroom, int numberOfNights){
+        //Booking newBooking;
+        Booking newBooking = new Booking(bedroom, numberOfNights);
+        return newBooking;
+    }
 }

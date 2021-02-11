@@ -69,6 +69,14 @@ public class HotelTest {
         assertEquals(0, conferenceRoom1.getGuestsCount());
     }
 
+    @Test
+    public void canMakeBooking(){
+        //Booking bookingTest = new Booking(null, 0);
+        //Booking newBooking = hotel.bookRoom(bedroom1, 3);
+        assertEquals(5, hotel.bookRoom(bedroom1, 5).getNumberOfNights());
+
+    }
+
 
 
 }
