@@ -14,11 +14,9 @@ public class BedroomTest {
     @Before
     public void before(){
         mike = new Guest("Mike");
-        //guests.add(mike);
         bedroom = new Bedroom(1, guests, RoomType.SINGLE, 1 );
-        bedroom.addGuest(mike);
 
-        //ArrayList<Guest> guests = new ArrayList<Guest>();
+
 
     }
 
@@ -28,9 +26,17 @@ public class BedroomTest {
     }
 
     @Test
-    public void startsWithNoGuests(){
+    public void canAddGuest(){
+        bedroom.addGuest(mike);
         assertEquals(1, bedroom.getGuestsCount());
     }
+
+    @Test
+    public void hasRoomType(){
+        assertEquals(RoomType.SINGLE, bedroom.getRoomType());
+    }
+
+
 
 
 }
