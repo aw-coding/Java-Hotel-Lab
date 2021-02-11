@@ -44,6 +44,19 @@ public class Hotel {
         this.conferenceRooms.add(conferenceRoom);
     }
 
+    public void checkOutGuestFromBedroom(Guest guest, int roomNumberToCheckOutOf) {
+        for (int bedroom = 0; bedroom < bedrooms.size(); bedroom++) {
+            if (bedrooms.get(bedroom).getRoomNumber() == roomNumberToCheckOutOf) {
+                bedrooms.get(bedroom).removeGuest(guest);
+            }
+        }
+    }
 
-
+    public void checkOutGuestFromConferenceRoom(Guest guest, String roomNameToCheckOutOf) {
+        for (int croom = 0; croom < conferenceRooms.size(); croom++) {
+            if (conferenceRooms.get(croom).getRoomName() == roomNameToCheckOutOf) {
+                conferenceRooms.get(croom).removeGuest(guest);
+            }
+        }
+    }
 }
