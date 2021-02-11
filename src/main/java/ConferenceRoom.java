@@ -11,5 +11,7 @@ public class ConferenceRoom extends Room {
     }
 
 
-
+    public String getRoomName() {
+        return this.roomName;
+    }
 }

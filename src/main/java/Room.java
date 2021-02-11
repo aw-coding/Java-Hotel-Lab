@@ -26,4 +26,6 @@ public abstract class Room {
     public void addGuest(Guest guest){
         this.guests.add(guest);
     }
+
+
 }
